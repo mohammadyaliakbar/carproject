@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>دستیار هوشمند خودرو</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+  --bg:#E9EEF3; --paper:#FFFFFF; --ink:#1B2733; --muted:#4A5B6B;
+  --navy:#12304A; --accent:#0E7C86; --line:#CFD9E2; --tint:#F1F6F9; --on-navy:#FFFFFF;
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0D141B; --paper:#151F29; --ink:#E6EDF3; --muted:#A3B2C0;
+    --navy:#0B2236; --accent:#4FC3CC; --line:#2A3947; --tint:#1A2631; --on-navy:#FFFFFF;
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0D141B; --paper:#151F29; --ink:#E6EDF3; --muted:#A3B2C0;
+  --navy:#0B2236; --accent:#4FC3CC; --line:#2A3947; --tint:#1A2631; --on-navy:#FFFFFF;
+  color-scheme:dark;
+}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{
+  margin:0; background:var(--bg); color:var(--ink);
+  font-family:"Vazirmatn",Tahoma,"Segoe UI",sans-serif;
+  font-size:17px; line-height:2.05;
+  background-image:radial-gradient(var(--line) 1px,transparent 1px);
+  background-size:22px 22px;
+}
+.page{
+  max-width:860px; margin:40px auto; background:var(--paper);
+  border:1px solid var(--line); border-radius:6px;
+  box-shadow:0 18px 50px rgba(18,48,74,.14); overflow:hidden;
+}
+header{
+  background:var(--navy); color:var(--on-navy);
+  padding:56px 56px 48px; border-bottom:5px solid var(--accent);
+}
+h1{margin:0; font-size:2.3rem; font-weight:800; line-height:1.5; letter-spacing:0}
+main{padding:44px 56px 52px}
+p{margin:0 0 22px; text-align:justify; color:var(--ink)}
+.lead{font-size:1.08rem; color:var(--ink); padding-right:20px; border-right:4px solid var(--accent)}
+h2{
+  margin:40px 0 22px; font-size:1.3rem; font-weight:700; color:var(--navy);
+  padding-bottom:10px; border-bottom:2px solid var(--line);
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) h2{color:var(--accent)}}
+:root[data-theme="dark"] h2{color:var(--accent)}
+ol{list-style:none; margin:0 0 30px; padding:0}
+li{
+  background:var(--tint); border:1px solid var(--line);
+  border-right:4px solid var(--accent); border-radius:4px;
+  padding:18px 22px; margin-bottom:16px; text-align:justify;
+}
+li b{color:var(--accent); font-weight:700}
+.closing{
+  margin-top:36px; padding:22px 26px; background:var(--tint);
+  border:1px solid var(--line); border-radius:4px;
+}
+.closing p:last-child,p:last-child{margin-bottom:0}
+@media (max-width:640px){
+  body{font-size:16px; line-height:1.95}
+  .page{margin:0; border-radius:0; border-left:0; border-right:0}
+  header{padding:40px 24px 34px} main{padding:30px 22px 38px}
+  h1{font-size:1.8rem}
+}
+@media print{
+  body{background:#fff; background-image:none}
+  .page{box-shadow:none; border:0; margin:0}
+}
+</style>
+</head>
+<body>
+<article class="page">
+<header><h1>دستیار هوشمند خودرو</h1></header>
+<main>
+<p class="lead">یک سامانه نرم‌افزاری برای کمک به راننده در مدیریت وضعیت خودرو، نگهداری پیشگیرانه و مواجهه با شرایط اضطراری است. هدف پروژه، توسعه دستیار هوشمندی است که بتواند با استفاده از داده‌های فنی خودرو، حسگرهای گوشی و اطلاعات ثبت‌شده، وضعیت‌های مهم را شناسایی کند و راهنمایی‌های کاربردی و متناسب با شرایط ارائه دهد.</p>
+
+<p>در بخش فنی، سامانه از طریق رابط OBD-II و دانگل سازگار، مانند ELM327، اطلاعات قابل‌دسترسی خودرو را دریافت می‌کند. این اطلاعات می‌توانند شامل پارامترهایی مانند دمای مایع خنک‌کننده، سرعت خودرو، دور موتور و کدهای خطای پشتیبانی‌شده باشند. در کنار این اطلاعات، امکان استفاده از حسگرهای گوشی و موقعیت مکانی نیز وجود دارد. دسترسی به هر پارامتر به قابلیت‌های خودرو، ECU، رابط ارتباطی و سخت‌افزار مورد استفاده بستگی دارد.</p>
+
+<h2>قابلیت‌های اصلی نسخه اولیه پروژه عبارت‌اند از:</h2>
+<ol>
+<li><b>۱. تشخیص احتمالی تصادف و اطلاع‌رسانی اضطراری:</b> سامانه با تحلیل اطلاعات حسگرهای گوشی و داده‌های قابل‌دسترسی خودرو، احتمال وقوع تصادف را بررسی می‌کند. در صورت تشخیص یک رویداد مشکوک، هشدار صوتی به راننده ارائه می‌شود و سامانه از او پاسخ می‌خواهد. اگر پاسخی دریافت نشود و شرایط تعریف‌شده برای اطلاع‌رسانی اضطراری برقرار باشد، امکان ارسال هشدار همراه با موقعیت مکانی بررسی می‌شود.</li>
+<li><b>۲. راهنمای هوشمند شرایط اضطراری:</b> سامانه در شرایطی مانند افزایش بیش از حد دمای موتور، خاموش شدن خودرو در مسیر یا مشاهده هشدارهای فنی، راهنمایی‌های کوتاه، مرحله‌ای و ایمن ارائه می‌دهد. هدف این قابلیت، کمک به راننده برای تصمیم‌گیری بهتر در شرایط پراسترس است. راهنمایی‌ها براساس اطلاعات معتبر و دستورالعمل‌های ایمنی تهیه می‌شوند و در صورت نیاز، مراجعه به امداد خودرو یا تعمیرکار را پیشنهاد می‌کنند.</li>
+<li><b>۳. مدیریت هوشمند نگهداری خودرو:</b> اطلاعات خودرو و سوابق سرویس ثبت می‌شوند تا سامانه بتواند زمان بررسی یا سرویس بعدی را براساس برنامه نگهداری معتبر و اطلاعات موجود پیشنهاد دهد. این قابلیت با هدف کمک به مدیریت بهتر نگهداری خودرو طراحی می‌شود و با پیش‌بینی قطعی خرابی تفاوت دارد.</li>
+<li><b>۴. تحلیل اولیه الگوی رانندگی:</b> سامانه با استفاده از داده‌های قابل‌دسترسی، برخی شاخص‌های رانندگی را بررسی می‌کند و گزارش‌ها یا پیشنهادهایی برای بهبود رفتار رانندگی ارائه می‌دهد. در صورت فراهم بودن داده کافی، این بخش می‌تواند در مراحل بعدی برای تحلیل مصرف سوخت و ارائه پیشنهادهای شخصی‌سازی‌شده توسعه یابد.</li>
+<li><b>۵. معماری توسعه‌پذیر و پشتیبانی از داده‌های مختلف:</b> سامانه به‌گونه‌ای طراحی می‌شود که در صورت عدم دسترسی به یک پارامتر یا حسگر، بتواند از داده‌های جایگزین موجود استفاده کند یا قابلیت مربوطه را غیرفعال کند. همچنین، بخشی از اطلاعات و امکانات باید بدون اینترنت قابل‌استفاده باشند و امکانات نیازمند ارتباط شبکه، در صورت فراهم بودن اتصال، فعال شوند.</li>
+</ol>
+
+<p>در مراحل بعدی، قابلیت‌هایی مانند برآورد و مقایسه قیمت قطعات خودرو و هزینه تعمیر از منابع معتبر، بررسی وضعیت درها در خودروهای سازگار، توسعه تحلیل‌های هوشمند و گسترش پشتیبانی از خودروهای مختلف قابل‌بررسی هستند.</p>
+
+<div class="closing"><p>هدف نهایی پروژه، ساخت یک دستیار نرم‌افزاری توسعه‌پذیر است که به‌جای نمایش صرف اطلاعات خودرو، بتواند داده‌های موجود را به هشدارها، گزارش‌ها و راهنمایی‌های کاربردی تبدیل کند. در نسخه اولیه، تمرکز بر پیاده‌سازی و ارزیابی چند قابلیت اصلی خواهد بود و توسعه امکانات پیشرفته به مراحل بعدی موکول می‌شود.</p></div>
+</main>
+</article>
+</body>
+</html>
